@@ -28,13 +28,6 @@
             <p>Edit Data Pasien</p>
         </div>
 
-        @if ($errors->any())
-                <div class="alert alert-danger">
-                    @foreach ($errors->all() as $error)
-                        <div>{{$error}}</div>
-                    @endforeach
-                </div>
-                @endif
 
         <form action="{{ url('/update-pasien/'.$pasiens->id) }}" method="POST" enctype="multipart/form-data">
             @csrf

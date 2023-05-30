@@ -24,14 +24,6 @@
             <p>Tambah Obat</p>
         </div>
 
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            @foreach ($errors->all() as $error)
-                <div>{{$error}}</div>
-            @endforeach
-        </div>
-        @endif
-
         <form action="{{ url('/tambah-obat') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form">
