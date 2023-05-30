@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\PasienController::class, 'index']);
 
 // Rute dibawah untuk akses data pasien dari database dan ditampilkan ke web
 Route::get('/pasien', [App\Http\Controllers\PasienController::class, 'index']);

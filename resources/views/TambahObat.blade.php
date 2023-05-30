@@ -28,7 +28,7 @@
             @csrf
             <div class="form">
                 <label for="">Nama Obat</label><br>
-                <input type="text" name="nama" class="form-control" placeholder="Nama Pasien...">
+                <input type="text" name="nama" class="form-control" placeholder="Nama Obat...">
 
                 <label for="">Kegunaan</label><br>
                 <input type="text" name="kegunaan" class="form-control" placeholder="Kegunaan...">
