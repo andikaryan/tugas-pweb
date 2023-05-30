@@ -34,7 +34,7 @@
                 <table align="center">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>No</th>
                             <th>Nama Pasien</th>
                             <th>Ruangan</th>
                             <th>Penyakit</th>
@@ -42,15 +42,25 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php
+                          $counter = 0;
+                        @endphp
                         @foreach ($pasien as $item)
+                        @php
+                          $counter += 1;
+                        @endphp
                         <tr>
-                            <td>{{ $item->id}}</td>
+                            <td>{{ $counter}}</td>
                             <td>{{ $item->nama}}</td>
                             <td>{{ $item->ruangan}}</td>
                             <td>{{ $item->penyakit}}</td>
                             <td>
-                                <a href="{{ url('/edit-pasien/'.$item->id)}}" class="tEdit">Edit</a>
-                                <a href="{{ url('/hapus-pasien/'.$item->id)}}" class="tHapus">Hapus</a>
+                                <a class="tEdit btn btn-primary btn-sm" href="{{ url('/edit-pasien/'.$item->id)}}" >Edit</a>
+                                <button class="btn btn-danger btn-sm" onclick="dialog_hapus()">Hapus</button>
+                                <form id='form_hapus' action="{{ url('/hapus-pasien/'.$item->id)}}" method="GET">
+                                  <input id='id' type="hidden" name='id' value="">
+                                </form>
+                        
                             </td>
 
                         </tr>
@@ -63,6 +73,19 @@
   </div>
 
 
+  <script type="text/javascript">
+  function dialog_hapus(pasien_id){
+    var tanya = confirm('Apakah anda yakin menghapus pasien ini?');
+
+    if(tanya==true){
+      var form = document.querySelector('#form_hapus');
+      var input_id = document.querySelector('#form_hapus #id');
+      input_id.value = pasien_id;
+
+      form.submit();
+    }
+  }
+</script>
 
 </body>
 </html>
