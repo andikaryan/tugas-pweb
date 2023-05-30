@@ -20,7 +20,3 @@
     </nav>
     <!-- Yield disini untuk menampilkan halaman yang berada di @section('main-content') pada pasien maupun obat -->
     @yield('main-content')
-    
-          
-    
-

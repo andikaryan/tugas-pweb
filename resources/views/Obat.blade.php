@@ -53,7 +53,7 @@
                             <td>{{ $counter}}</td>
                             <td>{{ $item->nama}}</td>
                             <td>{{ $item->kegunaan}}</td>
-                            <td>{{ $item->harga}}</td>
+                            <td>Rp{{ $item->harga}}</td>
                             <td>
                                 <a class="btn btn-primary btn-sm" href="{{ url('/edit-obat/'.$item->id)}}">Edit</a>
                                 <button class="btn btn-danger btn-sm" onclick="dialog_hapus()">Hapus</button>
