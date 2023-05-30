@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Rute dibawah untuk mengakses halaman tambah data pasien
 Route::get('/', [App\Http\Controllers\PasienController::class, 'index']);
 
 // Rute dibawah untuk akses data pasien dari database dan ditampilkan ke web
