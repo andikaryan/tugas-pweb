@@ -45,7 +45,7 @@ class PasienController extends Controller
     }
 
     /**
-     * Untuk menampilkan halaman edit obat yang sesuai id yang dipilih
+     * Untuk menampilkan halaman edit pasien yang sesuai id yang dipilih
      */
     public function edit($id)
     {
